@@ -1,0 +1,86 @@
+header{
+	background: #5b1a25;//#57EC88;
+}
+hr{
+	background: #B6B6B6;
+}
+span{
+	font-size: 50px;
+}
+.row{
+	padding-top: 1rem;
+}
+.body_oscuro{        
+    background: #5b1a25;
+}
+.login{
+		background: #FFF;
+		text-align: center;
+        width: 415px;       
+        height: 270px;
+        position: absolute;
+        top:45%;
+        left: 42%;           
+        margin-top: -100px;
+        margin-left: -100px;
+        border: 1px solid #BABABA;
+        border-radius: 15px;          
+}
+.login_contenedor{
+	padding: 25px;
+}
+.centro{
+	text-align: center;
+}
+.contenedor_menu{
+        border: 1px solid #BABABA;
+        border-radius: 15px;          
+        padding: 10px;
+        cursor: pointer;        
+}
+.contenedor_menu:hover{
+	 box-shadow: 3px 3px 10px #7162FF;/*#999*/
+
+}
+.enlace_menu{
+    color: #333;
+}
+
+		.contenedor_informe_verde{
+			text-align: center;
+			border: 2px solid green;
+			border-radius: 15px;
+			color: #FFF;			
+			background: #27a243;
+		}
+		.contenedor_informe_rojo{
+			text-align: center;
+			border: 2px solid #dc3545;
+			border-radius: 15px;
+			color: #FFF;			
+			background: #dc3545;
+		}
+		.contenedor_informe_amarilo{
+			text-align: center;
+			border: 2px solid #ffeb3b;
+			border-radius: 15px;
+			color: #FFF;			
+			background: #ffeb3b;
+		}
+		.contenedor_informe_azul{
+			text-align: center;
+			border: 2px solid #007bff;
+			border-radius: 15px;
+			color: #FFF;			
+			background: #007bff;
+		}	
+		.contenedor_informe_naranja{
+			text-align: center;
+			border: 2px solid #ffc107;
+			border-radius: 15px;
+			color: #FFF;			
+			background: #ffc107;
+		}	
+		.header_informe{
+			border-bottom: 1px solid #EEEEEE;
+		}

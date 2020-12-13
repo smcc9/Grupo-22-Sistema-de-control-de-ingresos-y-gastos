@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Prueba" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="804967b2-c6a5-40c2-a7a8-39b5cd1dac0a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     vecinos.`id_vecino` AS vecinos_id_vecino,
+     vecinos.`nombre` AS vecinos_nombre,
+     vecinos.`apellidos` AS vecinos_apellidos
+FROM
+     `vecinos` vecinos]]>
+	</queryString>
+	<field name="vecinos_id_vecino" class="java.lang.Integer"/>
+	<field name="vecinos_nombre" class="java.lang.String"/>
+	<field name="vecinos_apellidos" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="-20" y="0" width="595" height="64" uuid="bf876818-0250-4b4b-a474-12c4ad30f38b"/>
+				<imageExpression><![CDATA["wood.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="5" width="263" height="33" uuid="f79c55b4-3389-43c0-ba7e-3a71677dfb0e"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Wood Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="63" y="39" width="200" height="22" forecolor="#FFFFFF" uuid="75bdf987-4151-4354-bf49-9246e5db98f8"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Wood SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="35" width="555" height="1" uuid="afee7bab-99bd-41d8-b2a5-d5598e67c692"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement style="Column header" x="0" y="19" width="185" height="15" uuid="5ade5601-ee17-4846-8db3-1b26142db00a"/>
+				<text><![CDATA[vecinos_id_vecino]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="185" y="19" width="185" height="15" uuid="397b5606-6122-408f-ade0-9678506c7922"/>
+				<text><![CDATA[vecinos_nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="370" y="19" width="185" height="15" uuid="cd445953-0f99-4d18-b3d4-b3bd44af6ae4"/>
+				<text><![CDATA[vecinos_apellidos]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="555" height="1" uuid="3fe6667d-378c-43e8-a127-59e2914e687a"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="Detail" x="0" y="0" width="185" height="15" uuid="b953c4cc-a8db-482e-9adf-78ac8b403f53"/>
+				<textFieldExpression><![CDATA[$F{vecinos_id_vecino}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="185" y="0" width="185" height="15" uuid="d2f555f5-2b0a-4551-a5a0-a0b21d1b9a95"/>
+				<textFieldExpression><![CDATA[$F{vecinos_nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Detail" x="370" y="0" width="185" height="15" uuid="02052afd-45bb-4c2b-8419-b2dd60f4bf39"/>
+				<textFieldExpression><![CDATA[$F{vecinos_apellidos}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="d12b05de-d156-475c-b45f-83d3f92570f5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="cf043a6e-fe38-4668-8ad6-98fcac06c252"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="43e35961-eddd-4585-a81b-911dd34f1fd1"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="5b6693b7-d620-4b79-8c16-04b73184adb3"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

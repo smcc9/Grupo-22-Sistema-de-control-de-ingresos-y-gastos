@@ -1,0 +1,185 @@
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/Entypo/fonts/style.css">	
+	<link rel="stylesheet" href="css/estilo.css">
+	<style>
+		.contenedor_menu_desplegable{
+			background: #1e3c50;/* #27366E;*/
+			border-radius: 0%;
+			padding-left: 0;
+			padding-right: 0;
+			font-weight: 500;
+			height: 580px;
+			cursor: default;
+			position: absolute;
+			top: 80px;
+			width: auto;
+			margin-left: -8%;
+			z-index: 1000;
+                        //position: fixed;
+		}
+		ul.menu li > a{//,a
+			/*position: relative;*/
+			display: inline-block;	
+			color: #FFF;
+                        margin-top:9%;
+			padding-right: 30px;
+		}
+		ul{
+			padding: 0;
+			margin: 0;
+		}
+		li{
+			list-style: none;
+		}
+		ul.menu li > a{
+			text-decoration-line: none;
+			padding-left: 25px;
+			padding-top: 6px;
+                        margin-top: 6px;                     
+		}
+		.contenedor_menu_desplegable:hover{
+			box-shadow: 0px 0px 0px 0px #888888;
+		}
+		li:hover{
+			background: #122733;
+			text-decoration: none;					
+		}
+		ul.menu li > a:hover{
+			text-decoration-line: none;
+			color:#FFF;
+		}
+		.titulo{
+			background: #d9534f;//#d60022;
+			color:#FFF;
+			font-size: 20px;
+			padding-left: 10px;
+			display: flex;
+  			justify-content: right;
+		}
+		.seccion{
+			//margin-left: -31px;
+                        margin-top:50px;
+		}
+		.icono_menu{
+			font-size: 20px;
+			background: white;
+			color:#1e3c50; 
+			border-radius: 15% ;
+		}
+                ul.menu > li{
+                    //margin-top: 10%;
+                    padding: 1rem;
+                }
+                ul.menu_iconos > li{
+                    //margin-top: 25%;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    padding-left: 1.5rem;
+                }
+                
+                
+                .contenedor_informe_verde{
+			text-align: center;
+			border: 2px solid green;
+			border-radius: 4px;
+			color: #FFF;			
+			background: #27a243;
+                        padding: 0px, 5px;
+		}
+		.contenedor_informe_rojo{
+			text-align: center;
+			border: 2px solid #dc3545;
+			border-radius: 4px;
+			color: #FFF;			
+			background: #dc3545;
+                        padding: 0px, 5px;
+		}
+		.contenedor_informe_amarilo{
+			text-align: center;
+			border: 2px solid #E6DC35;
+			border-radius: 4px;
+			color: #FFF;			
+			background: #E6DC35;
+                        padding: 0px, 5px;
+		}
+		.contenedor_informe_azul{
+			text-align: center;
+			border: 2px solid #007bff;
+			border-radius: 4px;
+			color: #FFF;			
+			background: #007bff;
+                        padding: 0px, 5px;
+		}	
+		.contenedor_informe_naranja{
+			text-align: center;
+			border: 2px solid #ffc107;
+			border-radius: 4px;
+			color: #FFF;			
+			background: #ffc107;
+                        padding: 0px, 5px;
+		}	
+		.header_informe{
+			border-bottom: 1px solid #EEEEEE;
+		}
+                .espacio{
+                    padding-left: 2.5px;
+                    padding-right: 2.5px;
+                }
+	</style>
+	<div id="menu_desplegable">
+	<div class="contenedor_menu_desplegable">
+		<div class="titulo">
+                    <div class="" style="padding:.5rem;" >
+				&nbsp;&nbsp;<span class="icon-arrow-with-circle-right btn_derecha" style="font-size: 25px;"></span>
+			</div>
+		</div>
+		<ul class="menu_iconos">
+                    <li><a title="INICIO" href="menu.jsp" ><span class="icon-home icono_menu"></span></a></li>
+                    <li><a title="CATEGORIAS" href="Controlador_categorias" ><span class="icon-bookmarks icono_menu"></span></a></li>
+                    <li><a title="INGRESOS" href="Controlador_ingresos" ><span class="icon-credit icono_menu"></span></a></li>
+                    <li><a title="GASTOS" href="Controlador_gastos" ><span class="icon-calculator icono_menu"></span></a></li>
+                    <li><a title="VECINOS" href="Controlador_vecinos" ><span class="icon-users icono_menu"></span></a></li>
+                    <li><a title="REPORTES" href="Controlador_reportes" ><span class="icon-pie-chart icono_menu"></span></a></li>
+		</ul>	
+	</div>		
+	</div>
+	<div id="menu_completo" style="display: none;">
+	<div class="contenedor_menu_desplegable" >
+            <div class="titulo" style="padding-top: .5rem; padding-bottom: .5rem;" >
+                <div class="" style="padding-top: .5rem;" >Menu</div>
+                        <div class="" style=" padding-top: .5rem; " >
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;
+				<span class="icon-arrow-with-circle-left btn_menu" style="font-size: 25px;"></span>
+			</div>		
+		</div>
+		<ul class="menu">
+                    <li><a href="menu.jsp" ><span class="icon-home icono_menu"></span>&nbsp;&nbsp;INICIO</a></li>
+			<li><a href="Controlador_categorias" ><span class="icon-bookmarks icono_menu"></span>&nbsp;&nbsp;CATEGORIAS</a></li>
+			<li><a href="Controlador_ingresos" ><span class="icon-credit icono_menu"></span>&nbsp;&nbsp;INGRESOS</a></li>
+			<li><a href="Controlador_gastos" ><span class="icon-calculator icono_menu"></span>&nbsp;&nbsp;GASTOS</a></li>
+			<li><a href="Controlador_vecinos" ><span class="icon-users icono_menu"></span>&nbsp;&nbsp;VECINOS</a></li>
+			<li><a href="Controlador_reportes" ><span class="icon-pie-chart icono_menu"></span>&nbsp;&nbsp;REPORTES</a></li>
+		</ul>	
+	</div>
+	</div>
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+<script>
+$(document).ready(function() {
+    $( ".btn_menu" ).click(function() {
+        $('#menu_completo').hide(); 
+        $('#menu_desplegable').show(); 
+    });
+
+    $( ".btn_derecha" ).click(function() {
+        $('#menu_desplegable').hide(); 
+        $('#menu_completo').show(); 
+    });
+});		
+	</script>
