@@ -22,8 +22,7 @@ SET time_zone = "+00:00";
 -- Base de datos: `scig`
 --
 
--- --------------------------------------------------------
-
+----------------------------------------------------------
 --
 -- Estructura de tabla para la tabla `categorias`
 --
@@ -48,8 +47,7 @@ INSERT INTO `categorias` (`id_categoria`, `nombre_categoria`, `operacion`) VALUE
 (8, 'SERVICIOS BASICOS', 'GASTO'),
 (9, 'MANTENIMIENTO', 'GASTO');
 
--- --------------------------------------------------------
-
+----------------------------------------------------------
 --
 -- Estructura de tabla para la tabla `gastos`
 --
@@ -116,7 +114,6 @@ INSERT INTO `ingresos` (`id_ingreso`, `descripcion`, `categoria`, `fecha`, `mont
 (28, '12/12/2020 CUOTA MENSUAL DEL MES DE DICIEMBRE', 5, '2020-12-12', 20, 2);
 
 -- --------------------------------------------------------
-
 --
 -- Estructura de tabla para la tabla `usuarios`
 --
@@ -168,8 +165,6 @@ INSERT INTO `vecinos` (`id_vecino`, `nombre`, `apellidos`, `direccion`, `celular
 --
 -- Índices para tablas volcadas
 --
-
---
 -- Indices de la tabla `categorias`
 --
 ALTER TABLE `categorias`
@@ -205,8 +200,6 @@ ALTER TABLE `vecinos`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
-
---
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
@@ -238,8 +231,6 @@ ALTER TABLE `vecinos`
 
 --
 -- Restricciones para tablas volcadas
---
-
 --
 -- Filtros para la tabla `gastos`
 --
